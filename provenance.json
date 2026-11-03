@@ -1,0 +1,41 @@
+{
+  "name": "XXFHen",
+  "firmware": "14.00",
+  "console_tested": false,
+  "payload_sha256": "796ae39cece7c4954f1abace006f3271b69c6a1b8c8911ab47ded51a6a54d1da",
+  "payload_size": 297496,
+  "personal_loader": {
+    "repository": "https://github.com/well0nez/afterglow-web",
+    "revision_prefix": "acf25a8",
+    "engine_modified": false,
+    "original_payload_matches_user_original": true
+  },
+  "reference_loader": {
+    "repository": "https://github.com/sionga/ps4-14.00-jb",
+    "revision_prefix": "5232590",
+    "engine_modified": false,
+    "cname": "ps4.sentrix.ac",
+    "bundled_payload_sha256": "756077919fd59abd0eb3ae7b96b6295349b2a0a1b6a7d5c99b3c6898c4abe753",
+    "personal_payload": false
+  },
+  "changes": [
+    "Personal landing, styles, and firmware detection",
+    "Five-display-label XXFHen payload replaces the baseline GoldHEN",
+    "Run-page title/header branding and pre-import firmware/activation guards",
+    "Online-only publication, source packaging, and attribution page",
+    "Startup notification: XXFHen is ready!; author credit preserved",
+    "192x192 XF settings-menu icon; fixed PNG slot and size retained",
+    "Nine current menu/description display names personalized; IDs and credits preserved",
+    "Control Deck visual redesign: navy and mint launcher, responsive build/launch panels, matching inline loader styles"
+  ],
+  "online_only": true,
+  "startup_message": "XXFHen is ready!",
+  "personal_revision": "icon-and-menu-1",
+  "host_design_revision": "control-deck-1",
+  "baseline_feedback": {
+    "reported_by": "user",
+    "result": "worked",
+    "route_not_specified": true
+  },
+  "icon_sha256": "5436807ec594b59dfd040fc89244d5e4959377c0ae4f9f6505c9dd81476cc220"
+}
