@@ -1,0 +1,5 @@
+Built-in image_gen tool mode. New opaque raster icon.
+
+Use case: logo-brand. Asset type: a square menu icon for a personal PS4 homebrew build named XXFHen and its matching web host. Create one production-ready app icon, straight-on with no mockup or perspective. A bold, distinctive, interlocking XF monogram in pale mint green (#91d4aa), centered on a nearly black charcoal tile (#0b0d10). Angular geometric letterforms, clean precise edges, a subtle thin mint outline around a softly rounded square tile, generous padding. Restrained flat graphic, excellent readability when reduced to 192 by 192 pixels, strong silhouette, few colors, no fine detail. Text (verbatim): XF. Only the two letters XF, no other text, no PlayStation or Sony symbols, no existing GoldHEN imagery, no controller symbols, no watermark. Fill a square canvas with the icon, uniform dark background, opaque background.
+
+Console encoding: 192x192 8-bit indexed PNG, matching the original image format, with a reduced palette for the fixed binary resource budget. A valid private ancillary PNG chunk pads the final image to the original 12,712-byte slot.
