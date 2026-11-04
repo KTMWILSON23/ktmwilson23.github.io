@@ -2,7 +2,7 @@
   "name": "XXFHen",
   "firmware": "14.00",
   "console_tested": false,
-  "payload_sha256": "84182cb135d3b07365691baab5c05e22e23a5c784f4ee6b585b9b6e8d635fb58",
+  "payload_sha256": "2defcf90b3a64b629c2d5914009cf18d1009544a1cf8b1a9a1ea946eb92d3396",
   "payload_size": 297496,
   "personal_loader": {
     "repository": "https://github.com/well0nez/afterglow-web",
@@ -28,11 +28,12 @@
     "Nine current menu/description display names personalized; IDs and credits preserved",
     "Control Deck visual redesign: navy and mint launcher, responsive build/launch panels, matching inline loader styles",
     "Six PS4 section titles personalized: Tools, Cheats, Plugins, Overlay, Network, Extras; only display attributes changed",
-    "PS4 top-menu GoldHEN DDS logo replaced with mint XF; original DXT5 header, 256x256 dimensions, nine mipmaps, fixed allocation and size preserved"
+    "PS4 top-menu GoldHEN DDS logo replaced with mint XF; original DXT5 header, 256x256 dimensions, nine mipmaps, fixed allocation and size preserved",
+    "Native Start OrbisFTP button under XXFHen Network; targets installed OFTP00001 without an installer. One menu registration CALL and new callback in existing private ancillary PNG padding, plus one XML button. Experimental; console testing pending."
   ],
   "online_only": true,
   "startup_message": "XXFHen is ready!",
-  "personal_revision": "top-menu-logo-3",
+  "personal_revision": "orbisftp-network-4",
   "host_design_revision": "control-deck-1",
   "baseline_feedback": {
     "reported_by": "user",
@@ -40,6 +41,14 @@
     "route_not_specified": true
   },
   "icon_sha256": "5436807ec594b59dfd040fc89244d5e4959377c0ae4f9f6505c9dd81476cc220",
-  "previous_payload_sha256": "52cdd17e264da7021d048debf04da49b40207e0171c7aaf0a126d8f4af388cbf",
-  "rollback_payload": "goldhen-previous.bin"
+  "previous_payload_sha256": "84182cb135d3b07365691baab5c05e22e23a5c784f4ee6b585b9b6e8d635fb58",
+  "rollback_payload": "goldhen-previous.bin",
+  "payload_filename": "xxfhen.bin",
+  "orbisftp": {
+    "installed_title_id": "OFTP00001",
+    "installer_included": false,
+    "emulated_checks_passed": 24,
+    "live_console_tested": false,
+    "patch_source": "xxfhen-orbisftp-test1.zip"
+  }
 }
