@@ -2,7 +2,7 @@
   "name": "XXFHen",
   "firmware": "14.00",
   "console_tested": false,
-  "payload_sha256": "52cdd17e264da7021d048debf04da49b40207e0171c7aaf0a126d8f4af388cbf",
+  "payload_sha256": "84182cb135d3b07365691baab5c05e22e23a5c784f4ee6b585b9b6e8d635fb58",
   "payload_size": 297496,
   "personal_loader": {
     "repository": "https://github.com/well0nez/afterglow-web",
@@ -27,11 +27,12 @@
     "192x192 XF settings-menu icon; fixed PNG slot and size retained",
     "Nine current menu/description display names personalized; IDs and credits preserved",
     "Control Deck visual redesign: navy and mint launcher, responsive build/launch panels, matching inline loader styles",
-    "Six PS4 section titles personalized: Tools, Cheats, Plugins, Overlay, Network, Extras; only display attributes changed"
+    "Six PS4 section titles personalized: Tools, Cheats, Plugins, Overlay, Network, Extras; only display attributes changed",
+    "PS4 top-menu GoldHEN DDS logo replaced with mint XF; original DXT5 header, 256x256 dimensions, nine mipmaps, fixed allocation and size preserved"
   ],
   "online_only": true,
   "startup_message": "XXFHen is ready!",
-  "personal_revision": "menu-branding-2",
+  "personal_revision": "top-menu-logo-3",
   "host_design_revision": "control-deck-1",
   "baseline_feedback": {
     "reported_by": "user",
@@ -39,6 +40,6 @@
     "route_not_specified": true
   },
   "icon_sha256": "5436807ec594b59dfd040fc89244d5e4959377c0ae4f9f6505c9dd81476cc220",
-  "previous_payload_sha256": "796ae39cece7c4954f1abace006f3271b69c6a1b8c8911ab47ded51a6a54d1da",
+  "previous_payload_sha256": "52cdd17e264da7021d048debf04da49b40207e0171c7aaf0a126d8f4af388cbf",
   "rollback_payload": "goldhen-previous.bin"
 }
