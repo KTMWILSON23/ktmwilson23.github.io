@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a1016">
+  <title>XXFHen · OrbisFTP test</title>
+  <link rel="icon" href="assets/xxfhen-icon.png">
+  <link rel="stylesheet" href="host.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="wordmark" href="./"><img class="brand-icon" src="assets/xxfhen-icon.png" alt="" width="40" height="40"><span>XXFHen<span class="wordmark-detail">ORBISFTP TEST BUILD 1</span></span></a>
+      <nav class="topnav"><a href="./">Regular launcher</a><a href="credits.html">Credits &amp; source</a></nav>
+      <div class="firmware">PS4 <b>14.00</b></div>
+    </header>
+    <main>
+      <section class="intro">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span> EXPERIMENTAL / CONSOLE TEST PENDING</p><h1 id="host-title">Orbis<span>FTP</span><span class="title-period">.</span></h1><p class="subtitle">Your installed app. A new place to start it.</p></div>
+      </section>
+      <section class="deck" aria-label="OrbisFTP menu test">
+        <form id="launch-form">
+          <div class="selection-panel">
+            <p class="launch-heading"><span class="step">01</span> New menu action</p>
+            <p><strong>XXFHen Network → Start OrbisFTP</strong></p>
+            <p class="selection-note">Opens the OrbisFTP already installed on your PS4. No installer is included.</p>
+            <p class="selection-note">This native menu patch has passed static and emulated checks. It still needs a PS4 test and may fail or crash the menu. Fully restart before loading it.</p>
+            <p class="selection-note">To roll back, fully restart and use the regular launcher.</p>
+          </div>
+          <div class="launch-area">
+            <p class="launch-heading"><span class="step">02</span> Load the test build</p>
+            <div class="console-status"><span class="dot inactive" id="console-dot"></span><span id="console-status">Checking console…</span></div>
+            <button class="start" id="start" type="submit" disabled><span class="cross" aria-hidden="true">×</span><span id="start-label">Load OrbisFTP test</span><span class="button-arrow" aria-hidden="true">→</span></button>
+            <p id="hint" class="hint" aria-live="polite">Open this page on your PS4 running firmware 14.00.</p>
+          </div>
+        </form>
+        <div class="deck-foot"><span><i></i> SEPARATE TEST BUILD</span><span>REGULAR LAUNCHER UNCHANGED</span></div>
+      </section>
+      <nav class="utilities" aria-label="Test build files">
+        <a href="xxfhen-orbisftp-test1.bin" download="XXFHen-OrbisFTP-TEST.bin"><span class="utility-icon" aria-hidden="true">↓</span><span><strong>Test payload</strong><small>HEN only · experimental</small></span></a>
+        <a href="xxfhen-orbisftp-test1.zip" download><span class="utility-icon source-icon" aria-hidden="true">&lt;/&gt;</span><span><strong>Files &amp; patch source</strong><small>Checks, instructions &amp; rollback</small></span></a>
+        <a href="./"><span class="utility-icon" aria-hidden="true">↩</span><span><strong>Regular launcher</strong><small>Return to your previous build</small></span></a>
+      </nav>
+    </main>
+    <footer><span>XXFHen / ORBISFTP TEST 1</span><span><a href="credits.html">GoldHEN by SiSTRo</a> / OrbisFTP by OSM-Made</span></footer>
+  </div>
+  <script>
+    (function () {
+      "use strict";
+      var match = (navigator.userAgent || "").match(/PlayStation\s+4[\/ ](\d+)\.(\d+)/);
+      var supported = !!match && match[1] === "14" && match[2] === "00";
+      var button = document.getElementById("start");
+      var hint = document.getElementById("hint");
+      if (supported) {
+        document.getElementById("console-status").textContent = "PS4 14.00 · test build ready";
+        document.getElementById("console-dot").className = "dot";
+        hint.textContent = "After a full restart, press ×. Then open XXFHen Network → Start OrbisFTP.";
+        button.disabled = false;
+      } else {
+        document.getElementById("console-status").textContent = "PS4 14.00 required";
+      }
+      document.getElementById("launch-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!supported) return;
+        if (navigator.onLine === false) { hint.textContent = "Connect to the internet and reload this page."; return; }
+        try { sessionStorage.setItem("xxfhen.activation", String(Date.now())); }
+        catch (error) { hint.textContent = "Browser storage is unavailable. Reopen the browser and try again."; return; }
+        button.disabled = true;
+        document.getElementById("start-label").textContent = "Opening loader…";
+        location.href = "jb.html?log=1&afterglow=run&mode=goldhen&payload=xxfhen-orbisftp-test1.bin";
+      }, false);
+    })();
+  </script>
+</body>
+</html>
