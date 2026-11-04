@@ -39,7 +39,7 @@
     startButton.disabled = true;
     startLabel.textContent = "Opening loader…";
     location.href = picked() === "personal"
-      ? "jb.html?log=1&afterglow=run&mode=goldhen&payload=xxfhen.bin%3Fv%3Dbundled-1"
+      ? "jb.html?log=1&afterglow=run&mode=goldhen&payload=xxfhen.bin%3Fv%3Dbundled-diag2"
       : "sentrix/jb.html?log=1&mem=1&slots=9100000&drain=12&hx1400=1&kv=1&fam=0&telemetry=0&stage3=1&stage4=1&stage5=1&stage6=1&stage7=1&stage8=1&stage9=1&stage10=1&goldhen=1&v=xxfhen-1";
   }, false);
   document.getElementById("reload").addEventListener("click", function (event) { event.preventDefault(); location.reload(); }, false);

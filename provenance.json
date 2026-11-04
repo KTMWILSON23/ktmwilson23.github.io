@@ -2,7 +2,7 @@
   "name": "XXFHen",
   "firmware": "14.00",
   "console_tested": false,
-  "payload_sha256": "08bdb64696039cd273757e4650274be4fed3164798565bfe9a1c4e471845cbf9",
+  "payload_sha256": "08b1d28d83cd52604d70fbfc88d132a6f0c6409d51bf135a172f8fc76c01700d",
   "payload_size": 330264,
   "personal_loader": {
     "repository": "https://github.com/well0nez/afterglow-web",
@@ -30,11 +30,12 @@
     "Six PS4 section titles personalized: Tools, Cheats, Plugins, Overlay, Network, Extras; only display attributes changed",
     "PS4 top-menu GoldHEN DDS logo replaced with mint XF; original DXT5 header, 256x256 dimensions, nine mipmaps, fixed allocation and size preserved",
     "Native Start OrbisFTP button under XXFHen Network; targets installed OFTP00001 without an installer. One menu registration CALL and new callback in existing private ancillary PNG padding, plus one XML button. Experimental; console testing pending.",
-    "Bundled OrbisFTP server and libjbc; writes two /data runtime files and launches a ShellUI local child. No installed title/PKG needed. Experimental expanded outer data slot and 128px XF DDS; live console validation pending."
+    "Bundled OrbisFTP server and libjbc; writes two /data runtime files and launches a ShellUI local child. No installed title/PKG needed. Experimental expanded outer data slot and 128px XF DDS; live console validation pending.",
+    "Replace generic bundled-server preflight error with OF01\u2013OF10 stage-specific diagnostics; syscall errors include hexadecimal result. No server-startup repair claimed."
   ],
   "online_only": true,
   "startup_message": "XXFHen is ready!",
-  "personal_revision": "orbisftp-bundled-5",
+  "personal_revision": "orbisftp-bundled-diagnostic-6",
   "host_design_revision": "control-deck-1",
   "baseline_feedback": {
     "reported_by": "user",
@@ -54,15 +55,23 @@
       "/data/XXFHen/jbc.sprx"
     ],
     "port": 1337,
-    "emulated_backend_checks_passed": 48,
+    "emulated_backend_checks_passed": 52,
     "native_outer_unpack_checks_passed": 2,
     "live_console_tested": false,
-    "patch_source": "hen-orbisftp-source.zip"
+    "patch_source": "hen-orbisftp-source.zip",
+    "diagnostic_revision": 2
   },
   "previous_build_feedback": {
     "reported_by": "user",
     "result": "worked",
     "build": "orbisftp-network-4",
     "scope": "Installed-app OrbisFTP menu shortcut; does not establish bundled-backend compatibility"
+  },
+  "previous_embedded_feedback": {
+    "reported_by": "user",
+    "build": "orbisftp-bundled-5",
+    "result": "Menu loaded; Start OrbisFTP displayed Bundled server interface unavailable",
+    "runtime_files_present": false,
+    "repair_confirmed": false
   }
 }
