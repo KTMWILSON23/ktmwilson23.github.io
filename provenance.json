@@ -2,7 +2,7 @@
   "name": "XXFHen",
   "firmware": "14.00",
   "console_tested": false,
-  "payload_sha256": "d05e7f70bab4effcd306480445eeb9e9d1298d85f1058925f809da54f36ca04c",
+  "payload_sha256": "af2efc88d7fcc96d9fbb7572f01deae4e9586a2a70db28a3ed846122b0ac1d14",
   "payload_size": 330264,
   "personal_loader": {
     "repository": "https://github.com/well0nez/afterglow-web",
@@ -34,11 +34,12 @@
     "Replace generic bundled-server preflight error with OF01\u2013OF10 stage-specific diagnostics; syscall errors include hexadecimal result. No server-startup repair claimed.",
     "D3: unique binary/script filenames, unique menu ID, visible menu/startup revision markers, and removal of old generic status text. Backend failure remains unresolved pending visible D3 result.",
     "D4: replace failing fixed-path service load with bounded loaded-module export search; use /user/data runtime paths and non-null 40-byte firmware 14.00 process launch parameters. 58 backend, two native envelope, and two isolated firmware wrapper cases pass. Console startup pending.",
-    "D5: preserve the embedded ZIP on extraction failure for read-only FTP comparison. D4 reached extraction but failed after creating a zero-byte oftp.bin. 58 backend and two native envelope cases pass. Console startup pending."
+    "D5: preserve the embedded ZIP on extraction failure for read-only FTP comparison. D4 reached extraction but failed after creating a zero-byte oftp.bin. 58 backend and two native envelope cases pass. Console startup pending.",
+    "D6: replace failing managed ZIP extraction with bounded native LZ4 decoding and native writes of the two bundled runtime files. The D5 saved ZIP matched the embedded bytes exactly. 48 backend and two native envelope cases pass. Console startup pending."
   ],
   "online_only": true,
-  "startup_message": "XXFHen D5 ready!",
-  "personal_revision": "orbisftp-bundled-D5",
+  "startup_message": "XXFHen D6 ready!",
+  "personal_revision": "orbisftp-bundled-D6",
   "host_design_revision": "control-deck-1",
   "baseline_feedback": {
     "reported_by": "user",
@@ -48,7 +49,7 @@
   "icon_sha256": "5436807ec594b59dfd040fc89244d5e4959377c0ae4f9f6505c9dd81476cc220",
   "previous_payload_sha256": "2defcf90b3a64b629c2d5914009cf18d1009544a1cf8b1a9a1ea946eb92d3396",
   "rollback_payload": "goldhen-previous.bin",
-  "payload_filename": "xxfhen-d5.bin",
+  "payload_filename": "xxfhen-d6.bin",
   "orbisftp": {
     "installed_title_dependency": false,
     "installer_included": false,
@@ -62,12 +63,15 @@
     "native_outer_unpack_checks_passed": 2,
     "live_console_tested": false,
     "patch_source": "hen-orbisftp-source.zip",
-    "diagnostic_revision": "D5",
-    "menu_id": "id_xxfhen_orbis_d5",
-    "menu_title": "Start OrbisFTP [D5]",
+    "diagnostic_revision": "D6",
+    "menu_id": "id_xxfhen_orbis_d6",
+    "menu_title": "Start OrbisFTP [D6]",
     "generic_error_text_removed": true,
-    "temporary_archive": "/user/data/xxfhen-orbisftp-runtime.zip",
-    "firmware_wrapper_checks_passed": 2
+    "temporary_archive": null,
+    "firmware_wrapper_checks_passed": 2,
+    "bundle_format": "LZ4 blocks",
+    "bundle_bytes": 54310,
+    "native_file_writer": true
   },
   "previous_build_feedback": {
     "reported_by": "user",
@@ -84,9 +88,9 @@
   },
   "diagnostic_feedback": {
     "reported_by": "user",
-    "revision": "D4",
-    "result": "Runtime extraction failed; read-only FTP listing found zero-byte oftp.bin",
-    "D4_delivery_confirmed": true,
-    "D5_console_result_pending": true
+    "revision": "D5",
+    "result": "Managed extraction failed; retained ZIP exactly matched embedded archive",
+    "D5_delivery_confirmed": true,
+    "D6_console_result_pending": true
   }
 }
