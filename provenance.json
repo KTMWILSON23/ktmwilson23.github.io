@@ -2,7 +2,7 @@
   "name": "XXFHen",
   "firmware": "14.00",
   "console_tested": false,
-  "payload_sha256": "406a0ee7149701babef7411c34d092f193ce9720fb8679f1a5cdb5500fe759cb",
+  "payload_sha256": "8434565dcbf2e4bdc80ad2ebaf5eac92d0b3723201af0c4f3aba0ea241ce15ca",
   "payload_size": 330264,
   "personal_loader": {
     "repository": "https://github.com/well0nez/afterglow-web",
@@ -32,11 +32,12 @@
     "Native Start OrbisFTP button under XXFHen Network; targets installed OFTP00001 without an installer. One menu registration CALL and new callback in existing private ancillary PNG padding, plus one XML button. Experimental; console testing pending.",
     "Bundled OrbisFTP server and libjbc; writes two /data runtime files and launches a ShellUI local child. No installed title/PKG needed. Experimental expanded outer data slot and 128px XF DDS; live console validation pending.",
     "Replace generic bundled-server preflight error with OF01\u2013OF10 stage-specific diagnostics; syscall errors include hexadecimal result. No server-startup repair claimed.",
-    "D3: unique binary/script filenames, unique menu ID, visible menu/startup revision markers, and removal of old generic status text. Backend failure remains unresolved pending visible D3 result."
+    "D3: unique binary/script filenames, unique menu ID, visible menu/startup revision markers, and removal of old generic status text. Backend failure remains unresolved pending visible D3 result.",
+    "D4: replace failing fixed-path service load with bounded loaded-module export search; use /user/data runtime paths and non-null 40-byte firmware 14.00 process launch parameters. 58 backend, two native envelope, and two isolated firmware wrapper cases pass. Console startup pending."
   ],
   "online_only": true,
-  "startup_message": "XXFHen D3 ready!",
-  "personal_revision": "orbisftp-bundled-D3",
+  "startup_message": "XXFHen D4 ready!",
+  "personal_revision": "orbisftp-bundled-D4",
   "host_design_revision": "control-deck-1",
   "baseline_feedback": {
     "reported_by": "user",
@@ -46,24 +47,26 @@
   "icon_sha256": "5436807ec594b59dfd040fc89244d5e4959377c0ae4f9f6505c9dd81476cc220",
   "previous_payload_sha256": "2defcf90b3a64b629c2d5914009cf18d1009544a1cf8b1a9a1ea946eb92d3396",
   "rollback_payload": "goldhen-previous.bin",
-  "payload_filename": "xxfhen-d3.bin",
+  "payload_filename": "xxfhen-d4.bin",
   "orbisftp": {
     "installed_title_dependency": false,
     "installer_included": false,
     "bundled_server": true,
     "runtime_files": [
-      "/data/XXFHen/oftp.bin",
-      "/data/XXFHen/jbc.sprx"
+      "/user/data/XXFHen/oftp.bin",
+      "/user/data/XXFHen/jbc.sprx"
     ],
     "port": 1337,
     "emulated_backend_checks_passed": 52,
     "native_outer_unpack_checks_passed": 2,
     "live_console_tested": false,
     "patch_source": "hen-orbisftp-source.zip",
-    "diagnostic_revision": "D3",
-    "menu_id": "id_xxfhen_orbis_d3",
-    "menu_title": "Start OrbisFTP [D3]",
-    "generic_error_text_removed": true
+    "diagnostic_revision": "D4",
+    "menu_id": "id_xxfhen_orbis_d4",
+    "menu_title": "Start OrbisFTP [D4]",
+    "generic_error_text_removed": true,
+    "temporary_archive": "/user/data/xxfhen-orbisftp-runtime.zip",
+    "firmware_wrapper_checks_passed": 2
   },
   "previous_build_feedback": {
     "reported_by": "user",
@@ -80,9 +83,9 @@
   },
   "diagnostic_feedback": {
     "reported_by": "user",
-    "result": "User reports restart and diagnostic reload still showed original generic message",
-    "cause_confirmed": false,
-    "live_diag2_sha_verified": true,
-    "diag2_generic_status_block_reachable": false
+    "revision": "D3",
+    "result": "OF09 service load error 0x00000002",
+    "D3_delivery_confirmed": true,
+    "D4_console_result_pending": true
   }
 }
