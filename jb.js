@@ -53,7 +53,7 @@ const FROM_LANDING = (function () {
     const here = location.pathname.replace(/[^/]*$/, "");
     if (cameFrom !== here) return false;
     const file = r.pathname.slice(cameFrom.length);
-    return file === "" || file === "index.html";
+    return file === "" || file === "index.html" || file === "test-d8.html";
   } catch (e) {
     return false;
   }
@@ -84,7 +84,7 @@ const SENT_HOME = (function () {
      or stepping back lands straight on it again. */
   setTimeout(function () {
     try {
-      location.replace("index.html");
+      location.replace(params.get("build") === "orbis-d8" ? "test-d8.html" : "index.html");
     } catch (e) {}
   }, 1500);
   return true;
@@ -919,7 +919,7 @@ let mainMf = null,
       // however the files are served -- under a host's subdirectory just as
       // well as at a root.
       try {
-        history.replaceState(null, "", "index.html");
+        history.replaceState(null, "", params.get("build") === "orbis-d8" ? "test-d8.html" : "index.html");
       } catch (e) {}
       // Stop here. Without this the host's own chain would still run
       // afterwards -- afterglow IS the kernel stage, not a prelude to one.
