@@ -15,7 +15,7 @@
     var personal = picked() === "personal";
     document.getElementById("personal-choice").className = "build" + (personal ? " selected" : "");
     document.getElementById("reference-choice").className = "build" + (!personal ? " selected" : "");
-    startLabel.textContent = personal ? "Start XXFHen D7" : "Start reference HEN";
+    startLabel.textContent = personal ? "Start XXFHen" : "Start reference HEN";
     startButton.disabled = !supported;
     if (supported) hint.textContent = personal ? "Press × to begin. Keep this page open while it loads." : "Loads the original host's bundled HEN, using an internet connection.";
   }
@@ -39,7 +39,7 @@
     startButton.disabled = true;
     startLabel.textContent = "Opening loader…";
     location.href = picked() === "personal"
-      ? "jb.html?log=1&afterglow=run&mode=goldhen&payload=xxfhen-d7.bin&build=orbis-d7"
+      ? "jb.html?log=1&afterglow=run&mode=goldhen&payload=xxfhen-stable.bin&build=xf-stable"
       : "sentrix/jb.html?log=1&mem=1&slots=9100000&drain=12&hx1400=1&kv=1&fam=0&telemetry=0&stage3=1&stage4=1&stage5=1&stage6=1&stage7=1&stage8=1&stage9=1&stage10=1&goldhen=1&v=xxfhen-1";
   }, false);
   document.getElementById("reload").addEventListener("click", function (event) { event.preventDefault(); location.reload(); }, false);
