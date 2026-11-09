@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1016">
+  <meta name="description" content="XXFHen Control Deck. Your personal browser host for PlayStation 4 firmware 14.00.">
+  <title>XXFHen · Control Deck</title>
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/xxfhen-icon.png">
+  <link rel="stylesheet" href="host.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="wordmark" href="./" aria-label="XXFHen home">
+        <img class="brand-icon" src="assets/xxfhen-icon.png" alt="" width="40" height="40">
+        <span>XXFHen<span class="wordmark-detail">PERSONAL EDITION</span></span>
+      </a>
+      <nav class="topnav" aria-label="Main navigation"><a class="current" href="./" aria-current="page">Launcher</a><a href="credits.html">Credits &amp; source</a></nav>
+      <div class="firmware">PS4 <b>14.00</b></div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="host-title">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> YOUR PERSONAL CONTROL DECK</p>
+          <h1 id="host-title">XXF<span>Hen</span><span class="title-period">.</span></h1>
+          <p class="subtitle">Your console. Your signature.</p>
+        </div>
+        <div class="hero-mark" aria-hidden="true"><span class="mark-corner"></span><img src="assets/xxfhen-icon.png" alt="" width="128" height="128"><span class="mark-caption">XF / 14.00</span></div>
+      </section>
+
+      <section class="deck" aria-label="Payload launcher">
+        <form id="launch-form">
+          <div class="selection-panel">
+            <fieldset>
+              <legend><span class="step">01</span> Choose your build</legend>
+              <label class="build selected" id="personal-choice">
+                <input type="radio" name="build" value="personal" checked>
+                <span class="radio" aria-hidden="true"></span>
+                <span class="build-copy"><strong>XXFHen</strong><span>Bundled OrbisFTP · D8 console candidate</span></span>
+                <span class="build-tag">PERSONAL</span>
+              </label>
+              <label class="build" id="reference-choice">
+                <input type="radio" name="build" value="reference">
+                <span class="radio" aria-hidden="true"></span>
+                <span class="build-copy"><strong>Reference HEN</strong><span>Original Sentrix loading flow</span></span>
+                <span class="reference-arrow" aria-hidden="true">↗</span>
+              </label>
+            </fieldset>
+            <p class="selection-note">Choose a build, then press × to launch.</p>
+          </div>
+
+          <div class="launch-area">
+            <p class="launch-heading"><span class="step">02</span> Launch your edition</p>
+            <div class="console-status"><span class="dot" id="console-dot"></span><span id="console-status">Checking console…</span></div>
+            <button class="start" id="start" type="submit"><span class="cross" aria-hidden="true">×</span><span id="start-label">Start XXFHen D8</span><span class="button-arrow" aria-hidden="true">→</span></button>
+            <p id="hint" class="hint" aria-live="polite">Open this address in your PS4 browser on firmware 14.00.</p>
+          </div>
+        </form>
+        <div class="deck-foot"><span><i></i> ONLINE HOST</span><span>XXFHEN <b>v2.4b18.13</b></span></div>
+      </section>
+
+      <nav class="utilities" aria-label="Host resources">
+        <a href="xxfhen-d8.bin" download="xxfhen.bin"><span class="utility-icon" aria-hidden="true">↓</span><span><strong>Get XXFHen</strong><small>Download your payload</small></span><span class="utility-arrow" aria-hidden="true">↗</span></a>
+        <a href="credits.html"><span class="utility-icon source-icon" aria-hidden="true">&lt;/&gt;</span><span><strong>Behind the build</strong><small>Credits, licenses &amp; source</small></span><span class="utility-arrow" aria-hidden="true">↗</span></a>
+        <a href="./" id="reload"><span class="utility-icon" aria-hidden="true">↻</span><span><strong>Refresh the host</strong><small>Reload this page</small></span><span class="utility-arrow" aria-hidden="true">↗</span></a>
+      </nav>
+    </main>
+
+    <footer><span>XXFHen <span class="footer-muted">/ BUILT FOR YOUR PS4</span></span><span>OrbisFTP D8 · console testing pending <span class="footer-divider">/</span> <a href="credits.html">GoldHEN by SiSTRo</a></span></footer>
+  </div>
+  <script src="host-d8.js"></script>
+</body>
+</html>
