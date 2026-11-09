@@ -53,7 +53,7 @@ const FROM_LANDING = (function () {
     const here = location.pathname.replace(/[^/]*$/, "");
     if (cameFrom !== here) return false;
     const file = r.pathname.slice(cameFrom.length);
-    return file === "" || file === "index.html" || file === "test-d8.html" || file === "test-d9.html";
+    return file === "" || file === "index.html" || file === "test-d8.html" || file === "test-d9.html" || file === "test-about.html";
   } catch (e) {
     return false;
   }
@@ -84,7 +84,7 @@ const SENT_HOME = (function () {
      or stepping back lands straight on it again. */
   setTimeout(function () {
     try {
-      location.replace(params.get("build") === "orbis-d9" ? "test-d9.html" : params.get("build") === "orbis-d8" ? "test-d8.html" : "index.html");
+      location.replace(params.get("build") === "about-4" ? "test-about.html" : params.get("build") === "orbis-d9" ? "test-d9.html" : params.get("build") === "orbis-d8" ? "test-d8.html" : "index.html");
     } catch (e) {}
   }, 1500);
   return true;
@@ -919,7 +919,7 @@ let mainMf = null,
       // however the files are served -- under a host's subdirectory just as
       // well as at a root.
       try {
-        history.replaceState(null, "", params.get("build") === "orbis-d9" ? "test-d9.html" : params.get("build") === "orbis-d8" ? "test-d8.html" : "index.html");
+        history.replaceState(null, "", params.get("build") === "about-4" ? "test-about.html" : params.get("build") === "orbis-d9" ? "test-d9.html" : params.get("build") === "orbis-d8" ? "test-d8.html" : "index.html");
       } catch (e) {}
       // Stop here. Without this the host's own chain would still run
       // afterwards -- afterglow IS the kernel stage, not a prelude to one.
