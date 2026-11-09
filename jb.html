@@ -202,7 +202,7 @@
         activated = stamp > 0 && Date.now() >= stamp && Date.now() - stamp < 15 * 60 * 1000;
       } catch (error) {}
       if (target && activated) {
-        import("./jb.js").catch(function () {
+        import("./jb.js?v=d8-guard-32d2c19").catch(function () {
           document.body.className = "fail";
           document.getElementById("msg").textContent = "Loader files could not be opened. Return to the host and reload.";
         });
